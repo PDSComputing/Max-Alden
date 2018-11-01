@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <title>Countdown</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <button onclick="StartCountdown()">test</button>
+            <h1 style="position: absolute; font-family: impact; font-size: 150; left: 565">Countdown:</h1>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            <h1 style="position: absolute; font-family: impact; font-size:300; left: 850;" id="CountdownNumber">5</h1>
+        </div>
+        
+        <script>
+            function sleep(milliseconds) {
+             var start = new Date().getTime();
+             for (var x = 0; x < 1e7; x++) {
+             if ((new Date().getTime() - start) > milliseconds){
+             break;
+    }
+  }
+}
+            
+           function StartCountdown(){
+               for(i=5;i>=0;i--){
+                   document.getElementById("CountdownNumber").innerHTML = i;
+                   setTimeout(1000);
+               }
+           } 
+            
+            
+            
+            
+        </script>
+    </body>
+</html>
