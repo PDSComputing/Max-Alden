@@ -17,6 +17,7 @@
         </div>
         
         <script>
+            //sleep function I found online - doesn't actually work as intended.
             function sleep(milliseconds) {
              var start = new Date().getTime();
              for (var x = 0; x < 1e7; x++) {
@@ -25,11 +26,11 @@
     }
   }
 }
-            
+            //need to make function wait for 1 second after each iteration of the for loop
            function StartCountdown(){
                for(i=5;i>=0;i--){
                    document.getElementById("CountdownNumber").innerHTML = i;
-                   setTimeout(1000);
+                   
                }
            } 
             
