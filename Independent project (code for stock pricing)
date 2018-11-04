@@ -1,0 +1,129 @@
+import java.util.Random;
+
+/**
+ *
+ * @author Max Hadden
+ */
+public class StockProject {
+
+    	private static int getRandomNumberInRange(int min, int max) {
+
+		Random r = new Random();
+		return r.nextInt((max - min) + 1) + min;
+	}
+    
+    
+    public static void main(String[] args)throws InterruptedException {
+        //initial variables
+	double StockPrice1 = 25;
+	int priceCheck = 1;
+	System.out.println(StockPrice1);
+        while(priceCheck==1){
+        double Percentage = Math.random();
+        
+        //loop
+        if(Percentage>.9999){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(10,40) + e;
+            Thread.sleep(1000);
+        }
+        
+        else if(Percentage<.9999 && Percentage>.998){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(9,25) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.998 && Percentage>.99){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(9,15) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.99 && Percentage>.98){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(3,7) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.98 && Percentage>.95){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(1,5) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.95 && Percentage>.9){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(1,3) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.9 && Percentage>.8){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(1,2)/5 + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.8 && Percentage>.5){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(0,1)/5 + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.5 && Percentage>.2){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-1,0)/5 + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.2 && Percentage>.1){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-3,-1) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.1 && Percentage>.05){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-5,-1) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.05 && Percentage>.02){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-7,-3) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.02 && Percentage>.01){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-15,-9) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.01 && Percentage>.002){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-25,-9) + e;
+            Thread.sleep(1000);
+        }
+        else if(Percentage<.002){
+            double a = Math.random();
+        double e = Math.round(a * 100.0) / 100.0;
+            StockPrice1 += getRandomNumberInRange(-40,-10) + e;
+            Thread.sleep(1000);
+        }
+        if(StockPrice1>0){
+        System.out.println("$"+StockPrice1);
+        }
+        else if(StockPrice1<=0){
+            System.out.println("$0!");
+            Thread.sleep(1000);
+            System.out.println("...");
+            Thread.sleep(1000);
+            System.out.println("Bankrupt!");
+            System.exit(0);
+        }
+    }
+    }
+}
